@@ -11,7 +11,6 @@ const createTodo = (text) => {
     })
 }
 const Form = () => {
-
     const [text, setText] = useState();
     const todoMutation = useMutation(createTodo(text), {
         onSuccess: () => {
@@ -24,7 +23,7 @@ const Form = () => {
 
     return (
         <>
-            <input onClick={(e) => setText(text)} value={e.target} type="text" />
+            <input onClick={(e) => setText(e.target.value)} value={text} type="text" />
             <button onClick={(e) => todoMutation.mutate()}>Create</button>
         </>
     );

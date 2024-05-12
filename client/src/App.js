@@ -7,7 +7,7 @@ function App() {
     ['todo'],
     async () => await (await fetch('http://localhost:8000/todo')).json()
   )
-  // console.log('Data', data)
+  console.log('Data', data)
   return (
     <>
       <h1>Contact form</h1>
